@@ -5,7 +5,7 @@
         }),
         methods : {
             getFormattedDate(date) {
-                return date.getFullYear()+"-"+(Number(date.getMonth()) + 1) +"-"+date.getDate();
+                return date.getFullYear()+"-"+((Number(date.getMonth()) + 1) < 10 ? "0" + (Number(date.getMonth())) : (Number(date.getMonth())) ) +"-"+date.getDate();
             },
         
             sleep(ms) {
