@@ -73,13 +73,15 @@
         align-items:        center;
         border-radius:      90px;
     }
+
+    .loading{
+        height:50%;
+    }
 </style>
 
 <template> 
     <div class="div">
-        <p id="result">
-            <img v-if="temperature == true" src="/loading.gif" height="50%" />
+            <img v-if="temperature === ''" class="loading" src="/loading.png" />
             <p v-else>{{temperature}}</p>
-        </p>
     </div>
 </template>
